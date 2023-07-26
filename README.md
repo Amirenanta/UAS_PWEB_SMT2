@@ -6,7 +6,7 @@ Program Studi: PJJ Informatika
 
 Dosen Pengajar: Alun Sujjada, S.Kom., M.T
 
-Kelompok 3
+Kelompok 3 :
 
 MUHAMMAD SAIFULLOH (NIM : 220401010207)
 
