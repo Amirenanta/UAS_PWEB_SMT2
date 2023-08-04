@@ -1,0 +1,43 @@
+/* navbar */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.nav-link:hover::after {
+  content: "";
+  opacity: 1;
+  height: 2px;
+  width: 100%;
+  background-color: blue;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+/* end navbar */
+
+.card {
+  transition: 0.3s;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+.photo {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.content-img {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+}
+
+.text-justify {
+  font-size: 1rem;
+}
