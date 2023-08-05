@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat';
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+.nav-link {
+    position: relative;
+  }
+  
+  .nav-link::after {
+    opacity: 0;
+    transition: all 0.2s;
+  }
+  
+  .nav-link:hover::after {
+    content: "";
+    opacity: 1;
+    height: 2px;
+    width: 100%;
+    background-color: blue;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+
+
+  .hero {
+    background-image: url('coding.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+/* Features section styles */
+.features {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.feature {
+    margin-bottom: 2rem;
+}
+
+.feature img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+/* CTA section styles */
+.cta {
+    background-color: #f7f7f7;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cta button:hover {
+    background-color: #555;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
