@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <html>
   <head>
     <title>content</title>
@@ -107,5 +109,48 @@
       </div>
     </div>
     <!-- content card 2 end -->
+    
+      <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyC8q2MySmoaSBVIDF1jAah7YAk5xyH8Kyk",
+          authDomain: "uas-pweb-smt2.firebaseapp.com",
+          databaseURL: "https://uas-pweb-smt2-default-rtdb.asia-southeast1.firebasedatabase.app",
+          projectId: "uas-pweb-smt2",
+          storageBucket: "uas-pweb-smt2.appspot.com",
+          messagingSenderId: "536111214393",
+          appId: "1:536111214393:web:236a11a6741edad713c2e8",
+          measurementId: "G-L0G822BD9Q"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth = getAuth(app);
+
+        function checkAuthState() {
+      firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+          // User is signed in, allow access to the protected content
+          console.log('User is logged in:', user.email);
+        } else {
+          // User is not signed in, redirect to the login page or show a message
+          console.log('User is not logged in');
+          window.location.href = 'login.html'; // Redirect to the login page
+        }
+      });
+    }
+
+    // Call the checkAuthState function when the page loads
+    window.onload = checkAuthState;
+    </script>
   </body>
 </html>
